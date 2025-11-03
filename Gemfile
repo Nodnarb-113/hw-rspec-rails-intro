@@ -11,6 +11,14 @@ gem 'jquery-rails'
 gem 'bigdecimal', '1.3.5'
 gem 'web-console', '~> 2.0'
 
+gem 'faraday', '1.8.0'  # in main group; simplifies calling TMDb
+group :test do
+  gem 'rails-controller-testing'
+  gem 'guard-rspec'                 # automates re-running tests
+  gem "webmock", '2.3.2'
+
+end
+
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
   gem 'byebug'
